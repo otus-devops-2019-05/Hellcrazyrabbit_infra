@@ -28,11 +28,13 @@ Host sih
 Так же был выделен домен 3го уровня и направлен DNS хостингом на IP VPN-сервера
  
 ## Конфигурация VPN-сервера для проверки
-- bastion_IP = 35.232.76.112
+
+bastion_IP = 35.232.76.112
+
+someinternalhost_IP = 10.128.0.3
 `````
 hostname - vpn
 someinternalhost alias - sih
 ````` 
-- someinternalhost_IP = 10.128.0.3 
 
 
