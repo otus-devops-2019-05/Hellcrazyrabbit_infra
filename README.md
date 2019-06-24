@@ -43,7 +43,8 @@ someinternalhost alias - sih
 
 ### Проверка ДЗ
 
-testapp_IP = 35.198.167.169
+testapp_IP = 34.83.160.205
+
 testapp_port = 9292
 
 ### Самостоятельная работа
