@@ -4,7 +4,6 @@
             "type": "googlecompute",
             "project_id": "{{user `proj_id`}}",
             "image_name": "reddit-base-{{timestamp}}",
-	    "account_file": "/home/sysadmin/acc.json",
             "image_family": "reddit-base",
             "source_image_family": "{{user `src_image`}}",
             "zone": "us-west1-b",
