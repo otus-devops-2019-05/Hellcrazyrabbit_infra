@@ -1,0 +1,10 @@
+{
+	"proj_id": "myproj",
+	"src_image":"some_img",
+        "machine":"f1-micro",
+	"image_description":"some disk",
+        "disk_size":"10",
+        "disk_type":"pd-ssd",
+        "network":"default",
+        "tags":"puma-server"
+}
