@@ -1,3 +1,4 @@
+#!/bin/bash
 gcloud compute instances create reddit-app-new \
 --zone=us-west1-b \
 --boot-disk-size=10GB \
