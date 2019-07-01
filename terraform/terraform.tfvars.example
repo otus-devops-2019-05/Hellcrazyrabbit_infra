@@ -1,0 +1,5 @@
+project = "proj ID"
+public_key_path = "ssh_pub_key"
+disk_image = "image"
+private_key_path = "ssh private key"
+region = "default"
