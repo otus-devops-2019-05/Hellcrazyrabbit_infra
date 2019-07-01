@@ -93,7 +93,46 @@ ln -s /path/to/packer packer
  - Реализовано путем запуска bash скрипта с EOF в сервис файл.
  - Shell-скрипт сохранен в config-scripts.
 
+## Домашнее задание Практика IaC с использованием Terraform
 
- 
- 
- 
+ - [x] Установка Terraform и создание VM согласно описания
+
+Установка проиcходит аналогично установке Packer.
+
+### Самостоятельное задание 
+
+ - [x] Задать переменную для приватного ключа provisioner. Значение default зоны ресурса app. Отформатировать tf файлы. Создать examle переменных
+
+### Задание со *
+
+ - [x] Добавить ssh ключи пользователей в метаданные проекта
+
+**1й вариант**
+`````
+resource "google_compute_project_metadata" "ssh-keys" {
+    metadata {
+    ssh-keys = <<EOF
+appuser:${file(var.public_key_path)}
+appuser1:${file(var.public_key_path)}
+appuser2:${file(var.public_key_path)}
+EOF
+  }
+}
+`````
+удаляет все метаданные проекта и устанавливает указанные, можно импортировать имеющиеся 
+`````
+terraform import google_compute_project_metadata.ssh-keys my-project-id
+````` 
+
+**2й вариант**
+`````
+resource "google_compute_project_metadata_item" "appuser" {
+  key = "appuser"
+  value = "${file(var.public_key_path)}"
+}
+`````
+Создает отдельный экземпляр метаданных для проекта
+[мануал](https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html)
+
+
+- [ ]Создать балансировщик
