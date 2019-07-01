@@ -1,5 +1,5 @@
 project = "proj ID"
-public_key_path = ""
+public_key_path = "~/.ssh/appuser"
 disk_image = "image"
-private_key_path = ""
+private_key_path = "~/.ssh/appuser.pub"
 region = "default"
