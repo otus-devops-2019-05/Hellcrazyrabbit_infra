@@ -135,4 +135,4 @@ resource "google_compute_project_metadata_item" "appuser" {
 [мануал](https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html)
 
 
-- [ ]Создать балансировщик
+- [X] Создать балансировщик

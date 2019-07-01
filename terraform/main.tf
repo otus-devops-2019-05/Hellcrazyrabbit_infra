@@ -25,8 +25,9 @@ EOF
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "g1-small"
-  zone         = "europe-west1-b"
+  zone         = "${var.zone}"
   tags         = ["reddit-app"]
+  count        = "${var.count}"
 
   connection {
     type        = "ssh"
