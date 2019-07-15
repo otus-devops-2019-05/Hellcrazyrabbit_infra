@@ -5,21 +5,11 @@ terraform {
 
 provider "google" {
   # Версия провайдера
-  version = "2.0.0"
-
+  version     = "2.0.0"
+  credentials = "${file("/home/sysadmin/robot_acc.json")}"
   # ID проекта
   project = "${var.project}"
-  region  = "${var.region}"
-}
-
-resource "google_compute_project_metadata" "ssh-keys" {
-  metadata {
-    ssh-keys = <<EOF
-appuser:${file(var.public_key_path)}
-appuser1:${file(var.public_key_path)}
-appuser2:${file(var.public_key_path)}
-EOF
-  }
+  region  = "us-central1"
 }
 
 resource "google_compute_instance" "app" {
@@ -84,4 +74,20 @@ resource "google_compute_firewall" "firewall_puma" {
 
   # Правило применимо для инстансов с перечисленными тэгами
   target_tags = ["reddit-app"]
+}
+
+resource "google_compute_firewall" "firewall_ssh" {
+  name    = "default-allow-ssh"
+  network = "default"
+
+  allow {
+    protocol = "tcp"
+    ports    = [22]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+}
+
+resource "google_compute_address" "app-ip" {
+  name = "reddit-app-ip"
 }
