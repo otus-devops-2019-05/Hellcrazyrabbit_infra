@@ -32,3 +32,14 @@ variable disk_image {
   # Описание переменной
   description = "Disk image"
 }
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-img"
+}
+
+variable db_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-db-img"
+}
+
