@@ -12,3 +12,18 @@ variable app_disk_image {
   description = "Disk image for reddit app"
   default     = "reddit-app-img"
 }
+
+variable fw_port {
+  description = "Firewall allowed port"
+  default     = ["9292"]
+}
+
+variable fw_allowed_ip {
+  description = "Firewall allowed IP"
+  default     = ["0.0.0.0/0"]
+}
+
+variable vm_type {
+  description = "Gcloud machine type"
+  default     = "g1-small"
+}

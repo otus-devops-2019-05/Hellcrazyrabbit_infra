@@ -1,6 +1,6 @@
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
-  machine_type = "g1-small"
+  machine_type = "${var.vm_type}"
   zone         = "${var.zone}"
   tags         = ["reddit-app"]
 
@@ -27,6 +27,7 @@ resource "google_compute_address" "app_ip" {
   name = "reddit-app-ip"
 }
 
+#Firewall rule for app
 resource "google_compute_firewall" "firewall_puma" {
   name    = "allow-puma-default"
   network = "default"
@@ -34,9 +35,9 @@ resource "google_compute_firewall" "firewall_puma" {
   allow {
     protocol = "tcp"
 
-    ports = ["9292"]
+    ports = "${var.fw_port}"
   }
 
-  source_ranges = ["0.0.0.0/0"]
+  source_ranges = "${var.fw_allowed_ip}"
   target_tags   = ["reddit-app"]
 }

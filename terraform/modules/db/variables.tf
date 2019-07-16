@@ -12,3 +12,13 @@ variable db_disk_image {
   description = "Disk image for reddit app"
   default     = "reddit-db-img"
 }
+
+variable fw_port {
+  description = "Firewall allowed port"
+  default     = ["27017"]
+}
+
+variable vm_type {
+  description = "Gcloud machine type"
+  default     = "g1-small"
+}

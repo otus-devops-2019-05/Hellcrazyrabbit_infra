@@ -5,7 +5,7 @@ resource "google_compute_firewall" "firewall_ssh" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22"]
+    ports    = "${var.ssh_port}"
   }
 
   source_ranges = "${var.source_ranges}"
