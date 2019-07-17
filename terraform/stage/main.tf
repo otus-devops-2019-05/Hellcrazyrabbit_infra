@@ -6,7 +6,7 @@ terraform {
 provider "google" {
   # Версия провайдера
   version     = "2.0.0"
-  credentials = "${file("/home/sysadmin/robot_acc.json")}"
+  
 
   # ID проекта
   project = "${var.project}"
