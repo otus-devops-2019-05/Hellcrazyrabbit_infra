@@ -27,3 +27,8 @@ variable vm_type {
   description = "Gcloud machine type"
   default     = "g1-small"
 }
+
+variable install_puma {
+  description = "Puma service installation"
+  default     = "true"
+}
