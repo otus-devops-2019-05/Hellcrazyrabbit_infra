@@ -2,7 +2,7 @@ provider "google" {
   version     = "2.0.0"
   project     = "${var.project}"
   region      = "${var.region}"
-  credentials = "${file("/home/sysadmin/robot_acc.json")}"
+  
 }
 
 module "storage-bucket" {
