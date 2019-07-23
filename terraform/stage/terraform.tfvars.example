@@ -1,5 +1,5 @@
-project = "prismatic-canto0"
+project = "prismatic-c0"
 public_key_path = "~/.ssh/appuser.pub"
-disk_image = ""
+disk_image = "reddit-base"
 private_key_path = "~/.ssh/appuser"
 region = "us-central1"
