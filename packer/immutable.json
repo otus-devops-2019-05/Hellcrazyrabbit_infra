@@ -4,7 +4,6 @@
             "type": "googlecompute",
             "project_id": "{{user `proj_id`}}",
             "image_name": "reddit-full-{{timestamp}}",
-	    "account_file": "{{user `acc_file`}}",
             "image_family": "{{user `image_family`}}",
             "source_image_family": "{{user `src_image`}}",
             "zone": "us-west1-b",
@@ -23,14 +22,9 @@
             "script": "scripts/install_ruby.sh",
             "execute_command": "sudo {{.Path}}"
         },
-	{
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}"
-        },
         {
             "type": "shell",
-            "script": "files/deploy.sh",
+            "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
