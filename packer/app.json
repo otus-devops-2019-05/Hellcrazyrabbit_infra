@@ -21,7 +21,7 @@
         {
             "type": "ansible",
             "playbook_file": "../ansible/packer_app.yml",
-            "extra_arguments": [ "-vvv" ]
+            "user": "appuser"
         }
     ]
 }
