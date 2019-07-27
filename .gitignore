@@ -7,3 +7,5 @@ variables.json
 .terraform/
 *.save
 *.save.*
+*.retry
+*.pem
