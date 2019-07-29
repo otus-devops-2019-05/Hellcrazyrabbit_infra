@@ -3,10 +3,11 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `proj_id`}}",
-            "image_name": "reddit-full-{{timestamp}}",
-            "image_family": "{{user `image_family`}}",
+            "image_name": "reddit-db-img",
+            "image_family": "reddit-base",
             "source_image_family": "{{user `src_image`}}",
             "zone": "us-west1-b",
+	    "account_file": "{{user `acc_file`}}",
             "ssh_username": "appuser",
             "machine_type": "{{user `machine`}}",
 	    "image_description": "{{user `image_description`}}",
@@ -17,15 +18,10 @@
         }
     ],
     "provisioners": [
-        {
-            "type": "shell",
-            "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}"
+	{
+            "type": "ansible",
+            "playbook_file": "ansible/packer_db.yml",
+            "user": "appuser"
         }
     ]
 }
