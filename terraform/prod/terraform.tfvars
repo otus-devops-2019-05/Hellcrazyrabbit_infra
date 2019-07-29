@@ -1,0 +1,6 @@
+project = "prismatic-canto-229410"
+public_key_path = "~/.ssh/appuser.pub"
+disk_image = ""
+private_key_path = "~/.ssh/appuser"
+region = "us-central1"
+count = "1"

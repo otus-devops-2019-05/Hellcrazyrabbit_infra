@@ -1,2 +1,11 @@
 variables.json
 *.tmp
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+*.save
+*.save.*
+*.retry
+*.pem
