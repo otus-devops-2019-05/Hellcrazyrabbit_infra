@@ -9,3 +9,4 @@ variables.json
 *.save.*
 *.retry
 *.pem
+jdauphant.nginx

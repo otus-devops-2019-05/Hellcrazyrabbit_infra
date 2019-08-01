@@ -1,7 +1,5 @@
 - name: Mongo config
   hosts: dbserver
   become: true
-  vars:
-    mongo_bind_ip: 0.0.0.0
-    roles:
-      - db
+  roles:
+   - db
