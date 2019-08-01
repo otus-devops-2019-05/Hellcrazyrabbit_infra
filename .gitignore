@@ -10,3 +10,5 @@ variables.json
 *.retry
 *.pem
 jdauphant.nginx
+vault.key
+
