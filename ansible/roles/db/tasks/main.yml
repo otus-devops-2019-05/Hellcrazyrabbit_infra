@@ -1,5 +1,5 @@
 - name: Env info
-  debug: msg="This host is in {{env}} environment!!!"
+  debug: msg="This host is in {{ env }} environment!!!"
 - name: Change mongo config file
   template:
     src: mongod.conf.j2
