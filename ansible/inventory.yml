@@ -1,4 +1,0 @@
-all:
-  vars:
-    ansible_become: true
-    ansible_ssh_user: appuser

@@ -15,7 +15,7 @@ variable app_disk_image {
 
 variable fw_port {
   description = "Firewall allowed port"
-  default     = ["9292"]
+  default     = ["9292", "80"]
 }
 
 variable fw_allowed_ip {

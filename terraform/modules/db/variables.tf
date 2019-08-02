@@ -13,7 +13,7 @@ variable db_disk_image {
   default     = "reddit-db-img"
 }
 
-variable fw_port {
+variable db_fw_port {
   description = "Firewall allowed port"
   default     = ["27017"]
 }

@@ -1,0 +1,6 @@
+- name: App config
+  hosts: appserver
+  become: true
+  roles:
+    - app
+    - jdauphant.nginx
