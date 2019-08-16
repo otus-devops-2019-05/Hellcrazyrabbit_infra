@@ -11,4 +11,12 @@ variables.json
 *.pem
 jdauphant.nginx
 vault.key
-
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+Pipfile
+.lock
